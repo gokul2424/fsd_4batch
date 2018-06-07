@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Some Title</title>
+</head>
+<body>
+    <div id="message">Addition result</div>
+    <div>
+        <input type="number" id="oper1" placeholder="Enter 1st operand"/>
+        <input type="number" id="oper2" placeholder="Enter 2nd operand"/>
+        <button onclick="add()"> + </button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function add(){
+            var x = document.getElementById('oper1').value
+            var y = document.getElementById('oper2').value
+            var result = parseInt(x) + parseInt(y)
+            document.getElementById("result").innerText = result
+        }
+
+        // var result =add(23,44)
+
+       
+
+    </script>
+</body>
+</html>
