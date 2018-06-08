@@ -25,4 +25,8 @@
 
     CSS - Presentation
 
+    JQuery
+        Already built in functions in JS
+        $ajax
+
 

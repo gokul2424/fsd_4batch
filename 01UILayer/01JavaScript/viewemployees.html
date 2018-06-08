@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>View Employees</title>
+</head>
+<body>
+    <div>
+        <h2>Display employees here</h2>
+        <table id="datatable">
+           
+        </table>
+        <button onclick="loadData()">Load Data from Server</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script>
+        // Get employees from server
+        function loadData(){
+            console.log('Load data from server');
+
+            $.get('http://localhost:8080/dummy.json')
+            .then((res)=> {
+                console.log(res)
+                $.each(res, function( index, value ) {
+                    console.log( index + ": " + value );
+                    var listitem = ` <tr>
+                     <td>${value.first_name}</td> 
+                     <td>${value.last_name}</td> 
+                     <td>${value.email}</td> 
+                     <td>${value.gender}</td> 
+                     <td>${value.ip_address}</td> 
+                    </tr>`
+                    $('#datatable').append(listitem)
+                });
+            });
+        }
+
+    </script>
+</body>
+</html>

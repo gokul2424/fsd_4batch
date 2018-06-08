@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Some Title</title>
+<style>
+    div#message {
+        color: red;
+    }
+    .redclass {
+        border: 1px solid green;
+    }
+    div.redclass {
+        font-size: 30px
+    }
+
+</style>
+</head>
+<body>
+    <div id="message" class="redclass">Addition result</div>
+    <div>
+        <input class="redclass" type="number" id="oper1" placeholder="Enter 1st operand"/>
+        <input class="redclass" type="number" id="oper2" placeholder="Enter 2nd operand"/>
+        <button onclick="add()"> + </button>
+    </div>
+    <div id="result" class="redclass"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script>
+        function add(){
+            // var x = $('#oper1').val()
+            // var y = $('#oper2').val()
+            // var result = parseInt(x) + parseInt(y)
+            $('#result').html( parseInt($('#oper1').val()) +  parseInt($('#oper2').val()));
+        }
+
+        // var result =add(23,44)
+
+       
+
+    </script>
+</body>
+</html>

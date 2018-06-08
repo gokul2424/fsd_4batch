@@ -1,0 +1,71 @@
+[{
+  "id": 1,
+  "first_name": "Hal",
+  "last_name": "Edwicker",
+  "email": "hedwicker0@freewebs.com",
+  "gender": "Male",
+  "ip_address": "186.55.251.18"
+}, {
+  "id": 2,
+  "first_name": "Nikki",
+  "last_name": "Jirousek",
+  "email": "njirousek1@so-net.ne.jp",
+  "gender": "Male",
+  "ip_address": "157.160.167.80"
+}, {
+  "id": 3,
+  "first_name": "Rudolf",
+  "last_name": "Atherley",
+  "email": "ratherley2@theguardian.com",
+  "gender": "Male",
+  "ip_address": "220.62.68.105"
+}, {
+  "id": 4,
+  "first_name": "Agathe",
+  "last_name": "Derisley",
+  "email": "aderisley3@networkadvertising.org",
+  "gender": "Female",
+  "ip_address": "109.105.206.104"
+}, {
+  "id": 5,
+  "first_name": "Brit",
+  "last_name": "Teml",
+  "email": "bteml4@github.io",
+  "gender": "Female",
+  "ip_address": "47.107.209.205"
+}, {
+  "id": 6,
+  "first_name": "Casar",
+  "last_name": "Petracek",
+  "email": "cpetracek5@statcounter.com",
+  "gender": "Male",
+  "ip_address": "152.71.48.30"
+}, {
+  "id": 7,
+  "first_name": "Valeria",
+  "last_name": "Vouls",
+  "email": "vvouls6@abc.net.au",
+  "gender": "Female",
+  "ip_address": "240.142.120.184"
+}, {
+  "id": 8,
+  "first_name": "Pen",
+  "last_name": "Siegertsz",
+  "email": "psiegertsz7@jalbum.net",
+  "gender": "Male",
+  "ip_address": "6.154.125.40"
+}, {
+  "id": 9,
+  "first_name": "Iorgo",
+  "last_name": "Mallows",
+  "email": "imallows8@infoseek.co.jp",
+  "gender": "Male",
+  "ip_address": "233.234.36.238"
+}, {
+  "id": 10,
+  "first_name": "Raquel",
+  "last_name": "Warwick",
+  "email": "rwarwick9@ycombinator.com",
+  "gender": "Female",
+  "ip_address": "104.148.147.197"
+}]

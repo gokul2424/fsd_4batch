@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Clock</title>
+</head>
+<body>
+    <div>
+        <h2>Clock</h2>
+        <h3 id="clockdate">Display the date</h3>
+        <h3 id="clocktime">Display the time</h3>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script>
+        
+
+        var interval = setInterval(function(){
+            var today = new Date();
+            var datepara ='<p>' + today.getDate() +'/' + today.getMonth() + '/' + today.getFullYear()+ '</p>'
+            $('#clockdate').html(datepara)
+            var timepara ='<p>' + today.getHours() +':' + today.getMinutes() + ':' + today.getSeconds()+ '</p>'
+            $('#clocktime').html(timepara)
+
+        },1000)
+    </script>
+</body>
+</html>
