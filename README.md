@@ -29,4 +29,9 @@
         Already built in functions in JS
         $ajax
 
+    Angular
+        Full fledged framework -> http, mvc and all kind of facilities to create UI aps
+        In comparison to Jquery-> less JS and more of HTML --> easy to read and maintain
+        Jquery is just library of commonly used functions, AngularJS is a complete solution or framework for UI
+
 

@@ -5,22 +5,46 @@
 <body>
     <div>
         <h2>Display employees here</h2>
+        <input id="searchByFirstName" type="search" placeholder="Search by First Name" onchange="filterByName()"/>
         <table id="datatable">
            
         </table>
         <button onclick="loadData()">Load Data from Server</button>
+        <button onclick="reset()">Reset Search</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     
     <script>
+        var employees = [];
         // Get employees from server
+
+        function reset(){
+            $("#searchByFirstName").val('')
+            renderEmployees(employees)
+        }
+
+        function filterByName(){
+            console.log(employees);
+            var searchStr = $("#searchByFirstName").val()
+            console.log(searchStr);
+            filteredEmployees = employees.filter((emp)=> emp.first_name.includes(searchStr))
+            renderEmployees(filteredEmployees)
+        }
         function loadData(){
             console.log('Load data from server');
 
             $.get('http://localhost:8080/dummy.json')
             .then((res)=> {
-                console.log(res)
-                $.each(res, function( index, value ) {
+                console.log(employees)
+                employees = res;
+                renderEmployees(employees)
+            });
+        }
+
+        function renderEmployees(employees){
+            $('#datatable > tr').remove();
+            $.each(employees, function( index, value ) {
+                   
                     console.log( index + ": " + value );
                     var listitem = ` <tr>
                      <td>${value.first_name}</td> 
@@ -31,7 +55,6 @@
                     </tr>`
                     $('#datatable').append(listitem)
                 });
-            });
         }
 
     </script>

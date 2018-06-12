@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>View Employees</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css"/>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="AppCtrl">
+        <h2>Display employees here</h2>
+        <input ng-model="search.first_name" type="search" placeholder="Search by First Name" onchange="filterByName()"/>
+        <input ng-model="search.email" type="search" placeholder="Search by Email" onchange="filterByName()"/>
+        <input ng-model="search.$" type="search" placeholder="Search Anything" onchange="filterByName()"/>
+    
+        <table>
+           <tr ng-repeat="employee in employees | filter:search">
+               <td>{{employee.id}}</td>
+               <td>{{employee.first_name}}</td>
+               <td>{{employee.last_name}}</td>
+               <td>{{employee.gender}}</td>
+               <td>{{employee.email}}</td>
+               <td>{{employee.ip_address}}</td>
+           </tr>
+        </table>
+        <button ng-click="loadData()">Load Data from Server</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    
+    <script>
+
+        var app =angular.module('myApp', [])
+        app.controller('AppCtrl', function($scope, $http){
+            $scope.loadData = function(){
+                $http({
+                url: 'dummy.json',
+                method: 'GET'
+                }).then((res)=>{
+                    console.log(res.data)
+                    $scope.employees = res.data
+                });
+            }
+            
+        })
+    </script>
+</body>
+</html>
