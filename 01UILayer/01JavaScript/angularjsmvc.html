@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Simple App</title>
+</head>
+<body ng-app="calApp">
+    <div ng-controller="CalcCtrl">
+        <h2>Simple Interest Calc</h2>
+        <input type="number" ng-model="oper1"/>
+        <input type="number" ng-model="oper2"/>
+
+        <button ng-click="add()"> + </button>
+        <button ng-click="minus()"> - </button>
+        <button ng-click="mul()"> * </button>
+        <button ng-click="div()"> / </button>
+        
+        <div>{{result}}</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+        <script>
+            var module = angular.module('calApp', [])
+            module.controller('CalcCtrl', function($scope){
+                $scope.add = function(){
+                    $scope.result = $scope.oper1 + $scope.oper2
+                }
+                $scope.minus = function(){
+                    $scope.result = $scope.oper1 - $scope.oper2
+                }
+                $scope.mul = function(){
+                    $scope.result = $scope.oper1 * $scope.oper2
+                }
+                $scope.div = function(){
+                    $scope.result = $scope.oper1 / $scope.oper2
+                }
+            })
+        </script>
+</body>
+</html>

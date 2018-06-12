@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Simple App</title>
+</head>
+<body ng-app="">
+    <div>
+        <h2>Simple Interest Calc</h2>
+        <input type="number" ng-model="p"/>
+        <input type="number" ng-model="r"/>
+        <input type="number" ng-model="t"/>
+        <p ng-if="t">{{ p * t * r / 100}}</p>
+        
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    
+</body>
+</html>
