@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Simple App</title>
+    <style>
+        .delete{
+            color: red;
+            cursor: context-menu;
+        }
+    </style>
+</head>
+<body ng-app="TodoApp">
+    <div ng-controller="TodoCtrl">
+       <!-- Lets create a Todo App -->
+
+       <!-- Add to the list -->
+       <input type="text" ng-model="todo" placeholder="Add to TodoList"/>
+       <button ng-click="addTodo()">Add Todo</button>
+       <button ng-click="clearTodos()">Clear All Todos</button>
+
+       <!-- Display list of Todos -->
+        <ul>
+            <li ng-repeat="todo in todos"><span>{{todo}}</span><span class="delete" ng-click="removeTodo($index)"> X </span></li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script>
+    // create angular module and controller
+    var app = angular.module('TodoApp', []);
+    app.controller('TodoCtrl', function($scope){
+        // $scope.todos = ['Item1', 'Item 2']
+        // lets first read from localstorage
+        var todos = JSON.parse(localStorage.getItem('todos'));
+        $scope.todos = todos || []
+
+        $scope.addTodo = function(){
+            $scope.todos.push($scope.todo);
+            //lets write it to localStorage
+            localStorage.setItem('todos', JSON.stringify($scope.todos))
+            //challenge is .. only string are allowed not objects.. wo we will strinify
+            
+        }
+        $scope.removeTodo = function(index){
+            // $scope.todos.push($scope.todo);
+            // lets delete by index
+            console.log('Remove Item')
+            $scope.todos.splice(index, 1);
+        }
+        $scope.clearTodos = function(){
+            localStorage.removeItem('todos');
+        }
+    })
+
+    </script>
+</body>
+</html>
