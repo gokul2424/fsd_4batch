@@ -29,9 +29,25 @@
         Already built in functions in JS
         $ajax
 
-    Angular
+    AngularJS
         Full fledged framework -> http, mvc and all kind of facilities to create UI aps
         In comparison to Jquery-> less JS and more of HTML --> easy to read and maintain
         Jquery is just library of commonly used functions, AngularJS is a complete solution or framework for UI
+
+    Angular 
+        Steps to get it running
+            0. node installed first
+            1.  npm install -g @angular/cli
+            2. ng new <your-new-app-name>
+            3. ng serve
+
+        Transcompilation manually
+            1. http://www.typescriptlang.org/play/index.html
+            2. npm install -g typescript, tsc <filename>.ts
+        
+        Transcompilation by using task runner
+            1. npm install --save gulp typescript gulp-typescript
+            2. gulpfile.js -> contain task to run, default task
+            3. tsconfig.json to specify options for transcompilation
 
 
