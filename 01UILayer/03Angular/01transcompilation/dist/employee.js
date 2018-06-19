@@ -1,5 +1,5 @@
-class Employee {
-    constructor(id, name, _salary) {
+var Employee = /** @class */ (function () {
+    function Employee(id, name, _salary) {
         this.id = id;
         this.name = name;
         this._salary = _salary;
@@ -8,28 +8,33 @@ class Employee {
         // this.salary = salary;
         Employee.count++;
     }
-    set salary(newSalary) {
-        if (newSalary > 0) {
-            this._salary = newSalary;
-        }
-    }
-    get salary() {
-        return this._salary;
-    }
-    incrementSalary(incrementAmount) {
+    Object.defineProperty(Employee.prototype, "salary", {
+        get: function () {
+            return this._salary;
+        },
+        set: function (newSalary) {
+            if (newSalary > 0) {
+                this._salary = newSalary;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Employee.prototype.incrementSalary = function (incrementAmount) {
         this.salary = this.salary + incrementAmount;
         return true;
-    }
-}
-// id: number;
-// name: string;
-// salary: number;
-Employee.count = 0;
-let emp = new Employee(33, "Ravi", 34333.33);
+    };
+    // id: number;
+    // name: string;
+    // salary: number;
+    Employee.count = 0;
+    return Employee;
+}());
+var emp = new Employee(33, "Ravi", 34333.33);
 // emp.salary = -3;
 emp.salary = 33;
 console.log('Object count ', Employee.count);
-let emp2 = new Employee(323, "Priya", 44333.33);
+var emp2 = new Employee(323, "Priya", 44333.33);
 console.log('Object count ', Employee.count);
 // emp.id = 33
 // emp.name = "Ravi"
