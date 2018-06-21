@@ -5,6 +5,7 @@ import { CourseComponent } from './course.component';
 import { AppComponent } from './app.component';
 import { BadgeComponent } from './badge.component';
 import { CardComponent } from './components/card.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { CardComponent } from './components/card.component';
     AppComponent, CourseComponent, BadgeComponent, CardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

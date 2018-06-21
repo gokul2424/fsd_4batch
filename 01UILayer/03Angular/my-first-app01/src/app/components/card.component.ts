@@ -4,10 +4,10 @@ import { Component, OnInit, Input } from '@angular/core';
     selector: 'cts-card',
     template: `
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="http://via.placeholder.com/100x180" alt="Card image cap">
+    <img class="card-img-top" src="http://via.placeholder.com/100x80" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{course}}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">{{summary}}</p>
       <my-badge caption="Votes" count="0"></my-badge>
     </div>
   </div>
@@ -17,6 +17,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
 
     @Input('caption')course :string = "Angular"
+    @Input('summary')summary :string = ""
 
     constructor() { }
 

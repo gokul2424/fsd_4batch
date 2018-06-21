@@ -1,0 +1,6 @@
+[
+    {"caption":  "JavaScriptAJAX", "summary": "JS is simple but cubersome"},
+    {"caption":  "Jquery", "summary": "Jquery is simple and less cubersome"},
+    {"caption":  "AngularJS", "summary": "Fantastic but low on performance"},
+    {"caption":  "Angular", "summary": "Learning curve, high on performance"}
+ ]
