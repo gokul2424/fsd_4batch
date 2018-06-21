@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Course } from './Course';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,6 @@ export class AppComponent implements OnInit{
   }
 
 
-  courses: Array<object> = []
+  courses: Array<Course> = []
 
 }

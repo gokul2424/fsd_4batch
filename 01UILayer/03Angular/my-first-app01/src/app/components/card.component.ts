@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
     <div class="card-body">
       <h5 class="card-title">{{course}}</h5>
       <p class="card-text">{{summary}}</p>
-      <my-badge caption="Votes" count="0"></my-badge>
+      <my-badge caption="Votes" [count]="votesCount"></my-badge>
     </div>
   </div>
     
@@ -18,6 +18,7 @@ export class CardComponent implements OnInit {
 
     @Input('caption')course :string = "Angular"
     @Input('summary')summary :string = ""
+    @Input('votesCount')votesCount :number = 1
 
     constructor() { }
 
