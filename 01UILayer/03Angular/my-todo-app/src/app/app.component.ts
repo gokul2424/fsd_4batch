@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.http.get('assets/dummy.json')
+    this.http.get('http://localhost:7000/todos')
     .toPromise()
     .then(res=>res.json())
     .then(data => {
@@ -26,6 +26,13 @@ export class AppComponent implements OnInit {
   }
 
   addTodo(todo: string){
-    this.todos.push({text: todo});
+    
+    this.http.post('http://localhost:7000/todo', {text: todo})
+    .toPromise()
+    .then(res=>res.json())
+    .then(data => {
+      console.log(data);
+      this.todos = data
+    })
   }
 }
