@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h2>Add Todos </h2>
+  <input #t (change)="0" type="text" placeholder="Enter a todo item"/>
+  <button (click)="addTodo(t.value)">Add Todo</button>
+
+</div>
+<hr/>
+<h2>View Todos </h2>
+<ul>
+  <li *ngFor="let todo of todos">
+    <h4>{{todo.text}}</h4>
+  </li>
+  
+</ul>
+
