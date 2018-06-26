@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { BadgeComponent } from './badge.component';
 import { CardComponent } from './components/card.component';
 import { HttpModule } from '@angular/http';
+import { FilterCoursesPipe } from './pipes/filtercourses.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent, CourseComponent, BadgeComponent, CardComponent
+    AppComponent, CourseComponent, BadgeComponent, CardComponent, FilterCoursesPipe
   ],
   imports: [
     BrowserModule, HttpModule

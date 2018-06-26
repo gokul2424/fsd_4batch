@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   }
 
   addTodo(todo: string){
-    
+      
     this.http.post('http://localhost:7000/todo', {text: todo})
     .toPromise()
     .then(res=>res.json())

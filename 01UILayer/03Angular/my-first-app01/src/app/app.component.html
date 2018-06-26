@@ -3,7 +3,7 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-   <!-- 
+  <!-- 
   <h2>{{courseName}}</h2>
 
  <hr/>
@@ -13,16 +13,22 @@
   <my-badge caption="Sent" count="11"></my-badge>
   <my-badge caption="Spam" count="344"></my-badge>
   <hr/> -->
-<div class="container">
-  <div class="row">
-    <cts-card *ngFor="let course of courses" [caption]="course.caption" [summary]="course.summary" [votesCount]="course.votesCount"></cts-card>
+  <div class="container">
+    <div class="row">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Search</span>
+        </div>
+        <input type="text" #search (change)="0" class="form-control" placeholder="Search for courses" aria-label="Username" aria-describedby="basic-addon1"/>
+      </div>
+    </div>
+    <div class="row">
+      <cts-card *ngFor="let course of courses | filterCourses: search.value" [caption]="course.caption" [summary]="course.summary" [votesCount]="course.votesCount"></cts-card>
       <!-- <cts-card caption="React"></cts-card>
       <cts-card caption="EmberJS"></cts-card>
       <cts-card caption="CanJS"></cts-card> -->
+    </div>
   </div>
+
+
 </div>
-
-  
-</div>
-
-
