@@ -42,6 +42,13 @@ app.post('/todo', (req, res)=>{
     todos.push(todo);
     res.json(todos);
 })
+
+app.delete('/todos/:index', (req, res)=>{
+    var index = req.params.index
+    console.log(index)
+    todos.splice(index, 1);
+    res.json(todos);
+})
   const courses = [
     {
         title: 'Angular!!',

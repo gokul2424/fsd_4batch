@@ -2,5 +2,6 @@
     {"caption":  "JavaScriptAJAX", "summary": "JS is simple but cubersome" , "votesCount": 2},
     {"caption":  "Jquery", "summary": "Jquery is simple and less cubersome", "votesCount": 23},
     {"caption":  "AngularJS", "summary": "Fantastic but low on performance", "votesCount": 42},
-    {"caption":  "Angular", "summary": "Learning curve, high on performance", "votesCount": 12}
+    {"caption":  "Angular", "summary": "Learning curve, high on performance", "votesCount": 12},
+    {"caption":  "Nodejs", "summary": "interesting too..", "votesCount": 12}
  ]

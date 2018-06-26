@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FilterTodoPipe } from './pipes/filtertodos.pipe';
+import { TodoService } from './services/todo.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, FilterTodoPipe
   ],
   imports: [
     BrowserModule, HttpModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
