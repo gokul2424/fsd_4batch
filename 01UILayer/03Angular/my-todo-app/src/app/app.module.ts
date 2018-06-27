@@ -8,6 +8,7 @@ import { TodoService } from './services/todo.service';
 import {RouterModule} from '@angular/router'
 import { AddComponent } from './components/view/add.component';
 import { ViewComponent } from './components/view/view.component';
+import { LogService } from './services/log.service';
 
 const routes = [
   {path:"", component:ViewComponent},

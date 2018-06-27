@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
+import { LogService } from '../../services/log.service';
 
 @Component({
   selector: 'add-todo',
@@ -25,7 +26,7 @@ import { TodoService } from '../../services/todo.service';
 })
 export class AddComponent implements OnInit {
   message: string = ''
-  constructor(private todoService: TodoService) {
+  constructor(private todoService: TodoService, private logService: LogService) {
 
   }
   ngOnInit() {
@@ -33,6 +34,8 @@ export class AddComponent implements OnInit {
   }
 
   addTodo(todo: string) {
+    this.logService.pushLog(todo);
+
     this.todoService.addTodo(todo)
       .then(data => this.extractData(data))
   }

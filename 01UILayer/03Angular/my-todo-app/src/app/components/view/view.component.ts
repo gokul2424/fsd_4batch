@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { Todo } from '../../todo';
+import { LogService } from '../../services/log.service';
 
 @Component({
   selector: 'view-todo',
@@ -10,11 +11,14 @@ import { Todo } from '../../todo';
 export class ViewComponent implements OnInit {
 
   todos: Array<Todo> = []
-  constructor(private todoService: TodoService){
+  logs: Array<string> =[]
+  constructor(private todoService: TodoService, private logService: LogService){
 
   }
 
   ngOnInit(){
+   this.logs = this.logService.fetchLog()
+    
    this.todoService.fetchTodos()
    .then(data => this.extractData(data))
   }
