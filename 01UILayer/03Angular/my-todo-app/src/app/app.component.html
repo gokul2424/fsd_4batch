@@ -1,31 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h2>Add Todos </h2>
+<div>
 
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">Add your todo item -> </span>
-    </div>
-    <input type="text" #t (change)="0" class="form-control" placeholder="Enter a todo item" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
+    <nav>
+        <a routerLink="/">View Todo</a> |  <a routerLink="/add">Add Todo</a>
+    </nav>
 
-  <button type="button" class="btn btn-primary" (click)="addTodo(t.value)">Add Todo</button>
-
-
+  <router-outlet></router-outlet>
 </div>
-<hr/>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">Search</span>
-    </div>
-    <input type="text" #search (change)="0" class="form-control" placeholder="Search for todos" aria-label="Username" aria-describedby="basic-addon1"/>
-  </div>
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let todo of todos | filterTodos:search.value ; let i = index; ">
-
-    <div><span>{{todo.text}}</span><span class="deletetodo" (click)="removeTodo(i)">     X </span></div>
-  </li>
-  
-</ul>
 

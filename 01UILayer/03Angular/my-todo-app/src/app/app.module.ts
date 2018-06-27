@@ -5,13 +5,22 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FilterTodoPipe } from './pipes/filtertodos.pipe';
 import { TodoService } from './services/todo.service';
+import {RouterModule} from '@angular/router'
+import { AddComponent } from './components/view/add.component';
+import { ViewComponent } from './components/view/view.component';
+
+const routes = [
+  {path:"", component:ViewComponent},
+  {path:"add", component:AddComponent},
+
+]
 
 @NgModule({
   declarations: [
-    AppComponent, FilterTodoPipe
+    AppComponent, FilterTodoPipe, AddComponent, ViewComponent
   ],
   imports: [
-    BrowserModule, HttpModule
+    BrowserModule, HttpModule , RouterModule.forRoot(routes)
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
