@@ -50,4 +50,14 @@
             2. gulpfile.js -> contain task to run, default task
             3. tsconfig.json to specify options for transcompilation
 
+    Angular
+        Components
+        Style Components
+        Nested Components
+        Pipes
+        Services 
+            Hierarchical Dependency Injection
+        Routing
+            
+
 
