@@ -19,6 +19,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
         <span class="input-group-text" id="basic-addon1">Add your todo item -> </span>
       </div>
       <input type="text" name="todo" formControlName="todo" class="form-control" placeholder="Enter a todo item" aria-label="Username" aria-describedby="basic-addon1">
+      <small *ngIf="!myForm.controls['todo'].valid">Todo Required!!</small>
     </div>
   
     <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Add Todo</button>
