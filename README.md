@@ -58,6 +58,9 @@
         Services 
             Hierarchical Dependency Injection
         Routing
+        Forms Validations
+        
+    Java
             
 
 
