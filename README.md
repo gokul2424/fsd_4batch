@@ -61,6 +61,16 @@
         Forms Validations
         
     Java
+        Objects and Classes
+        OBject orientation
+        Collections API
+        Exception Handling
+        JDBC - To connect to databases
+
+        Web applications
+
+    Spring
+        Spring based REST API
             
 
 
