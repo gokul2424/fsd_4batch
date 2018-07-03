@@ -1,4 +1,4 @@
-package com.cts;
+package com.cts.oops;
 
 public class Employee {
 
@@ -29,6 +29,10 @@ public class Employee {
 		if(newSalary>0){
 			this.salary+= newSalary;		
 		}
+	}
+	
+	public void m1(){
+		System.out.println("M1 in employee");
 	}
 
 	
