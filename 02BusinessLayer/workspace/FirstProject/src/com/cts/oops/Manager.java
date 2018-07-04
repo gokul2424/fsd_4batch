@@ -6,7 +6,7 @@ public class Manager extends Employee{
 
 	//Constructor for manager
 	Manager(int id, String name, Double salary, int age, int numberOfEmployeesUnder) {
-		super(id, name, salary, age);
+		super(id, name, salary, age, null);
 		this.numberOfEmployeesUnder = numberOfEmployeesUnder;
 	}
 

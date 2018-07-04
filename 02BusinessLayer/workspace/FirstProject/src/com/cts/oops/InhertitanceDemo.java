@@ -3,6 +3,10 @@ package com.cts.oops;
 public class InhertitanceDemo {
 	
 //	Manager___ is a ___Employee
+//	Address __ is a ___ Employee
+//	Employee __ is a ___ Address
+	
+//	Employee __ has a __ Address
 	
 	public static void main(String[] args) {
 		Manager manager1 = new Manager(23, "Ravi", 33433.34, 34,5);

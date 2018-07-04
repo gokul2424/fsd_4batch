@@ -7,22 +7,24 @@ public class Employee {
 	String name;
 	Double salary;
 	short age;
+	Address address;
 	
 	//Constructor
-	Employee(int id, String name, Double salary, int age){
+	Employee(int id, String name, Double salary, int age, Address address){
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
 		this.age = (short) age;
+		this.address = address;
 	}
+	
 	
 	//String representation of the object
-	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + ", address=" + address
+				+ "]";
 	}
-
 
 	// Member functions or methods
 	public void incrementSalary(Double newSalary){
@@ -31,6 +33,9 @@ public class Employee {
 		}
 	}
 	
+
+
+
 	public void m1(){
 		System.out.println("M1 in employee");
 	}

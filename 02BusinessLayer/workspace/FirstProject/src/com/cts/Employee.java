@@ -9,7 +9,7 @@ public class Employee {
 	short age;
 	
 	//Constructor
-	Employee(int id, String name, Double salary, int age){
+	public Employee(int id, String name, Double salary, int age){
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
