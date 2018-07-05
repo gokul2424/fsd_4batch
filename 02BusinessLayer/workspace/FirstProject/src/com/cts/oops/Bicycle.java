@@ -1,6 +1,6 @@
 package com.cts.oops;
 
-public abstract class Bicycle {
+public abstract class Bicycle implements IBicycle {
 
 	int speed;
 	
@@ -10,7 +10,9 @@ public abstract class Bicycle {
 	}
 	
 	public abstract void brakeDown();
-
+	
+	
+	
 	public void speedUp(){
 		speed++;
 	}

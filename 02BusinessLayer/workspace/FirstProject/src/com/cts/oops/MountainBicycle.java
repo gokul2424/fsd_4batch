@@ -17,5 +17,10 @@ public class MountainBicycle extends Bicycle {
 	}
 	
 	
+	@Override
+	public void changeGear(){
+		System.out.println("Changing gears for Mountain Bicycle");
+	}
+	
 
 }

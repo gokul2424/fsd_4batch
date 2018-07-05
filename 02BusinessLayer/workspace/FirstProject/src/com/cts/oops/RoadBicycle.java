@@ -24,6 +24,11 @@ public class RoadBicycle extends Bicycle {
 		
 	}
 	
+	@Override
+	public void changeGear(){
+		System.out.println("Changing gears for Road Bicycle");
+	}
+	
 	
 
 }

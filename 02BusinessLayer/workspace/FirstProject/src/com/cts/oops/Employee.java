@@ -10,7 +10,7 @@ public class Employee {
 	Address address;
 	
 	//Constructor
-	Employee(int id, String name, Double salary, int age, Address address){
+	public Employee(int id, String name, Double salary, int age, Address address){
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
