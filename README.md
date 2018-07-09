@@ -62,15 +62,15 @@
         
     Java
         Objects and Classes
-        OBject orientation
-        Collections API
-        Exception Handling
-        JDBC - To connect to databases
-
-        Web applications
+        OBject orientation - Inheritance, Abstract, Interfaces
+        Collections API - Lists, Maps, Sets
+        Exception Handling - Checked & Unchecked
+        String - Mutable and special class
+        Gargbage Collection - Automated
 
     Spring
-        Spring based REST API
+        Framework - Shopping mall
+        Spring Dependency Injection
             
 
 

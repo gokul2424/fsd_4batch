@@ -22,7 +22,7 @@ public class MapsDemo {
 		
 		System.out.println(employeeMap);
 		
-		System.out.println(employeeMap.get(1));
+		System.out.println(employeeMap.get(12));
 		
 		
 		Set<Integer> ids = employeeMap.keySet();
