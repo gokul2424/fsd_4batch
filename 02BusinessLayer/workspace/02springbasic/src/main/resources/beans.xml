@@ -13,19 +13,8 @@
  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
  
 	
-	<bean id="a" class="com.cts.A">
-		<constructor-arg ref="b"></constructor-arg>
-		<constructor-arg ref="c"></constructor-arg>
-	</bean> 
-	<bean id="b" class="com.cts.B"></bean> 
-	<bean id="c" class="com.cts.C"></bean> 
+	<context:component-scan base-package="com.cts" />
 	
-	
-	<bean id="transferService" class="com.cts.TransferService">
-		<!-- <constructor-arg ref="transferRepository"></constructor-arg> -->	
-		<property name="transferRepository" ref="transferRepository"></property>
-	</bean>
-	<bean id="transferRepository" class="com.cts.TransferRepository"/>
  
  
 </beans>
