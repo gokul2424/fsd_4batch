@@ -15,6 +15,14 @@
 	
 	<context:component-scan base-package="com.cts" />
 	
+	<!-- Post Process Bean Definition< -->
+	<context:property-placeholder location="mydb.properties"/>
+	
+	<bean id="databaseConfig" class="com.cts.DatabaseConfig">
+		<property name="dbUrl" value="${db.url}"></property>
+		<property name="dbPort" value="${db.port}"></property>
+	</bean>
+	
  
  
 </beans>

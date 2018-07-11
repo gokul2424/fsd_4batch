@@ -15,6 +15,9 @@ public class TestTransferService1 {
 	
 	@Autowired
 	TransferService service;
+	
+	@Autowired
+	DatabaseConfig databaseConfig;
 
 	@Test
 	public void test() {
@@ -26,6 +29,11 @@ public class TestTransferService1 {
 	public void testAnotherAccount() {
 		boolean result = service.payment(4321, 9876, 333.33);
 		assertTrue(result);
+	}
+	
+	@Test
+	public void printDbConfig(){
+		System.out.println(databaseConfig);
 	}
 
 }
