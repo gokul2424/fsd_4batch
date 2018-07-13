@@ -27,7 +27,7 @@ app.use('*', cors({
 })
 
   const todos = [
-    {"text" : "Buy Milk from Server !!"},
+    {"text" : "Buy Milk from Server !!", done: true},
     {"text" : "Watch Fifa, CR vs Brazil!!"},
     {"text" : "Book weekend tickets"}
 ]
