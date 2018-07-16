@@ -71,6 +71,14 @@
     Spring
         Framework - Shopping mall
         Spring Dependency Injection
+            - XML
+            - Annotations
+        Spring Testing
+        Spring Lifecycle
+        Spring AOP
+            - scattering & tangling
+        Spring JDBC
+            - connect out application to DB - MySQL
             
 
 
