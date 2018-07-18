@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Account App!
+  </h1>
+  
+</div>
+
+<p class="red">{{message}}</p>
+
+<p>{{account?.id}}</p>
+<p>{{account?.name}}</p>
+<p>{{account?.balance}}</p>
+
+<input #accNo (change)="0" type="number" placeholder="Enter your account number"/>
+<button (click)="fetchAccount(accNo.value)">Fetch Details</button>
+
