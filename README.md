@@ -58,7 +58,20 @@
         Services 
             Hierarchical Dependency Injection
         Routing
+            - single page application
+            - parameters
+            - error handling
+            - programmatic navigation
+            - resolves
+        Directives
+            - components without templates
+            - structural -> change DOM
+            - attribute -> apply functionality
+        Unit Testing
+            - jasmine & karma
+            - @angular/test
         Forms Validations
+
         
     Java
         Objects and Classes
@@ -81,5 +94,5 @@
             - connect out application to DB - MySQL
         Spring REST
             
-
+    
 

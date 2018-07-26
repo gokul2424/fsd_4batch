@@ -25,11 +25,15 @@ public class AccountController {
 	
 	@RequestMapping(method=RequestMethod.GET, path="/accounts")
 	public List<Account> fetchAllAccount(){
-		Account account1 = new Account(12, "Ravi", 34443.34);
-		Account account2 = new Account(122, "Priya", 24443.34);
-		List<Account> accounts = new ArrayList<>();
-		accounts.add(account1); accounts.add(account2);
-		return accounts;
+//		Account account1 = new Account(12, "Ravi", 34443.34);
+//		Account account2 = new Account(122, "Priya", 24443.34);
+//		List<Account> accounts = new ArrayList<>();
+//		accounts.add(account1); accounts.add(account2);
+		
+		return accountRepository.loadAllAccounts();
+		 
 	}
+	
+	
 
 }
