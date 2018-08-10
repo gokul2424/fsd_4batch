@@ -19,6 +19,26 @@ public class TestEmployee {
 		em.close();
 	}
 	
+	void removeEmployee(int id){
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		Employee emp = em.find(Employee.class, id);
+		em.remove(emp);
+		tx.commit();
+		em.close();
+	}
+	
+	void updateEmployee(int id){
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		Employee emp = em.find(Employee.class, id);
+		emp.name = "Sonia";
+		tx.commit();
+		em.close();
+	}
+	
 	Employee fetchEmployee(int id){
 		EntityManager em = emf.createEntityManager();
 		Employee emp = em.find(Employee.class, id);
