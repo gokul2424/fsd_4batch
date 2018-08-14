@@ -23,6 +23,17 @@ public class PersonRepo {
 		tx.commit();
 		em.close();
 	}
+	public Person findPerson(int id) {
+		
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		Person p = em.find(Person.class, id);
+		
+		tx.commit();
+		em.close();
+		return p;
+	}
 	
 //	public void removeItem(int id){
 //		EntityManager em = emf.createEntityManager();

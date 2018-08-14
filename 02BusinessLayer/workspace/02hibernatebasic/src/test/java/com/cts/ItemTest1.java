@@ -31,11 +31,12 @@ public class ItemTest1 {
 		assertEquals(item.getName() ,"Iphone");
 	}
 	
-//	@Test
+	@Test
 	public void testUpdateItem() {	
-		Item item  =itemRepo.updateItem(7);
+		Item item  =itemRepo.updateItem(6);
+		item.setName("IPhone");
 		System.out.println(item);
-		assertEquals(item.getName() ,"Ipad");
+		assertEquals(item.getName() ,"IPhone");
 	}
 	
 //	@Test
@@ -45,7 +46,7 @@ public class ItemTest1 {
 //		assertEquals(item.getName() ,"Ipad");
 	}
 	
-	@Test
+//	@Test
 	public void testItemByName() {	
 		List<Item> items = itemRepo.fetchItemsByName("Iphone");
 		System.out.println(items);

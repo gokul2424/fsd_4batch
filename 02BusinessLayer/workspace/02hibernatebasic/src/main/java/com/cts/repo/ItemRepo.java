@@ -39,7 +39,7 @@ public class ItemRepo {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		Item item = em.find(Item.class, id);
-		item.setName("Ipad");
+		
 		tx.commit();
 		em.close();
 		return item;

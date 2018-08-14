@@ -21,12 +21,22 @@ public class PersonTest {
 		personRepo = new PersonRepo();
 	}
 
-	@Test
+//	@Test
 	public void test() {
 		Address address = new Address(12, "Belandur", "Bengaluru");
-		List<Address> addresses = Arrays.asList(address);
-		Person person = new Person("Ravi", 24, addresses);
+		Address address2 = new Address(122, "Jangpura", "New Delhi");
+		List<Address> addresses = Arrays.asList(address, address2);
+		Person person = new Person("Priya", 24, addresses);
 		personRepo.savePerson(person);
+	}
+	
+	@Test
+	public void testFindPerson() {
+	
+		Person p = personRepo.findPerson(12); 
+		System.out.println(p);
+		System.out.println(p.getAddresses());
+		assertEquals(p.getName(), "Priya");
 	}
 ////	@Test
 //	public void testFetchItem() {
