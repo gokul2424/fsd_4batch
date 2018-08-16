@@ -1,10 +1,11 @@
 package com.cts.entity.inherit;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-@DiscriminatorValue(value="3")
+@Table(name="ContractEmployee_ID_JND")
+//@DiscriminatorValue(value="3")
 public class ContractEmployee extends Employee {
 
 	double payPerMonth;

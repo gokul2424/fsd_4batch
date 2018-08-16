@@ -1,6 +1,5 @@
 package com.cts.entity.inherit;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,9 +9,9 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Employee_ID")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorValue(value="1")
+@Table(name="Employee_ID_JND")
+@Inheritance(strategy=InheritanceType.JOINED)
+//@DiscriminatorValue(value="1")
 public class Employee {
 
 	@Id
