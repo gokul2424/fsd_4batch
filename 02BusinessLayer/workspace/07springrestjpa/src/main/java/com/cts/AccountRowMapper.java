@@ -12,7 +12,7 @@ public class AccountRowMapper implements RowMapper<Account>{
 		String username = rs.getString("name");
 		Double balance = rs.getDouble("balance");
 		
-		Account account = new Account(id, username, balance);
+		Account account = new Account(username, balance);
 		return account;
 	}
 

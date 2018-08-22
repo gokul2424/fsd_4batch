@@ -13,5 +13,13 @@
 <p>{{account?.balance}}</p>
 
 <input #accNo (change)="0" type="number" placeholder="Enter your account number"/>
-<button (click)="fetchAccount(accNo.value)">Fetch Details</button>
+<button (click)="fetchAccount(accNo.value)">Fetch Account</button>
+
+<hr>
+<button (click)="fetchAllAccount()">Fetch All Accounts</button>
+<div *ngFor="let account of accounts">
+    <p>{{account?.id}}</p>
+    <p>{{account?.name}}</p>
+    <p>{{account?.balance}}</p>
+</div>
 

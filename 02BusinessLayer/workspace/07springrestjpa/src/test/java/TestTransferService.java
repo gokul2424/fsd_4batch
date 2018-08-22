@@ -28,5 +28,12 @@ public class TestTransferService {
 		List<Account> accounts = accountRepo.loadAllAccounts();
 		System.out.println(accounts);
 	}
+	
+//	@Test
+//	public void addAccount(){
+//		Account account = new Account("Test123", 343433.45);
+//		accountRepo.
+//		
+//	}
 
 }

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name="findAllAccounts", query="select account from Account account")
+@NamedQuery(name="findAllAccounts", query="select a from Account a")
 public class Account {
 	
 	@Id
@@ -37,9 +37,9 @@ public class Account {
 	public Account(){
 		
 	}
-	public Account(int id, String name, double balance) {
+	public Account(String name, double balance) {
 		super();
-		this.id = id;
+
 		this.name = name;
 		this.balance = balance;
 	}
