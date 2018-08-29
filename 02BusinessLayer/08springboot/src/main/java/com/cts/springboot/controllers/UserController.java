@@ -3,6 +3,8 @@ package com.cts.springboot.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +18,9 @@ public class UserController {
 	
 	@Autowired
 	UserService service;
+	
+	@Autowired
+	MessageSource messageSource;
 	
 	@GetMapping(path="/users/{id}")
 	public User getUser(@PathVariable("id") int id) throws UserNotFoundException{
@@ -35,6 +40,13 @@ public class UserController {
 		service.saveUser(user);
 		ResponseEntity<Void> rs = new ResponseEntity<>(HttpStatus.CREATED);
 		return rs;
+	}
+	
+	@GetMapping(path="/message")
+	public String greetMessage(){
+//		return "Good Morning!!";
+		return messageSource.getMessage("good.morning.message", null, 
+				LocaleContextHolder.getLocale());
 	}
 
 }
