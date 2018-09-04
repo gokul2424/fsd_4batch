@@ -7,12 +7,16 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+
 @Entity
+@ApiModel("User Entity class")
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
+	
 	@Size(min=2)
 	String name;
 //	@JsonIgnore
