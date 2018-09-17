@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.common.net.MediaType;
+
 @RestController
 public class UserController {
 	
@@ -30,7 +32,7 @@ public class UserController {
 		return user;
 		
 	}
-	@GetMapping(path="/users")
+	@GetMapping(path="/users", produces= [MediaType.APPLICATION_XML_UTF_8] )
 	public List<User> getAllUsers(){
 		return service.findAllUsers();
 	}
