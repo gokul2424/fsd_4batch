@@ -1,0 +1,10 @@
+<p>
+  view-categories works!
+</p>
+
+<input type="number" (keyup)="0" #id />
+{{id.value}}
+<button (click)="fetchCategory(id.value)">Fetch Category</button>
+<hr>
+
+<h2>Category Name: {{categoryName}}</h2>
